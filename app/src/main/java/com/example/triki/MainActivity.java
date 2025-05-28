@@ -189,7 +189,7 @@ public class MainActivity extends Activity {
     }
     private void registrarResultado(String ganador) {
         String fechaActual = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date());
-        String horaActual = new SimpleDateFormat("HH:mm", Locale.getDefault()).format(new Date());
+        String horaActual = new SimpleDateFormat("HH:mm:ss", Locale.getDefault()).format(new Date());
         String sql = "INSERT INTO triki (ganador, fecha, hora) VALUES ('" + ganador + "', '" + fechaActual + "', '" + horaActual + "')";
         db.execSQL(sql);
     }
